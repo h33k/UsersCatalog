@@ -15,7 +15,7 @@ function validate_user_data($user)
         ];
     }
 
-    if (strlen($user->name) > 32) {
+    if (strlen($user->name) > 60) {
         return [
             'success' => false,
             'message' => 'ФИО пользователя слишком длинное.'
