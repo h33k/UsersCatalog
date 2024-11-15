@@ -1,0 +1,43 @@
+body {
+    background: #f4f4f4;
+}
+
+#layout_div {
+    margin-top: 50px;
+}
+
+.custom_container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.centered_header {
+    text-align: center;
+    font-weight: bold;
+}
+
+.action_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+
+}
+
+.action_buttons button {
+    height: 30px;
+
+}
+
+.action_buttons button:last-child {
+    margin-top: 10px;
+}
+
+
+#pager {
+    width: 50%;
+    transform: translateY(-38px);
+}
+
