@@ -1,6 +1,6 @@
-Установка
-- Настроить .env файл для подключения к БД mysql
-- Запустить эту sql команду для создания таблицы
+Install
+- Configure .env file to connect to db
+- Run this sql command
   ```
   CREATE TABLE users (
     id BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -12,58 +12,58 @@
     PRIMARY KEY (id)
   );
   ```
-- Заполнить таблицу тестовыми данными этой sql коммандой (опционально):
-  ```
-  INSERT INTO users (name, login, password, role, access)
-  VALUES
-  ('Иванов Максим Максимович', 'maxim', '123456', 'admin', 1),
-  ('Смирнов Алексей Алексеевич', 'alexey2', '123456', 'user', 1),
-  ('Кузнецов Дмитрий Дмитриевич', 'dmitriy3', '123456', 'user', 1),
-  ('Попов Сергей Сергеевич', 'sergey4', '123456', 'user', 1),
-  ('Васильев Николай Николаевич', 'nikolay5', '123456', 'user', 1),
-  ('Петров Александр Александрович', 'alexandr6', '123456', 'user', 1),
-  ('Соколов Михаил Михайлович', 'mikhail7', '123456', 'user', 1),
-  ('Михайлов Андрей Андреевич', 'andrey8', '123456', 'user', 1),
-  ('Новиков Иван Иванович', 'ivan9', '123456', 'user', 1),
-  ('Фёдоров Артём Артемович', 'artem10', '123456', 'user', 1),
-  ('Морозов Владимир Владимирович', 'vladimir11', '123456', 'user', 1),
-  ('Волков Роман Романович', 'roman12', '123456', 'user', 1),
-  ('Алексеев Евгений Евгеньевич', 'evgeniy13', '123456', 'user', 1),
-  ('Лебедев Павел Павлович', 'pavel14', '123456', 'user', 1),
-  ('Семенов Константин Константинович', 'konstantin15', '123456', 'user', 1),
-  ('Егоров Виктор Викторович', 'viktor16', '123456', 'user', 1),
-  ('Ильин Денис Денисович', 'denis17', '123456', 'user', 1),
-  ('Зайцев Олег Олегович', 'oleg18', '123456', 'user', 1),
-  ('Павлов Вячеслав Вячеславович', 'vyacheslav19', '123456', 'user', 1),
-  ('Сергеев Василий Васильевич', 'vasiliy20', '123456', 'user', 1),
-  ('Степанов Максим Максимович', 'maxim21', '123456', 'user', 1),
-  ('Николаев Игорь Игоревич', 'igor22', '123456', 'user', 1),
-  ('Орлов Артемий Артемьевич', 'artemiy23', '123456', 'user', 1),
-  ('Афанасьев Станислав Станиславович', 'stanislav24', '123456', 'user', 1),
-  ('Фролов Анатолий Анатольевич', 'anatoliy25', '123456', 'user', 1),
-  ('Шмидт Григорий Григорьевич', 'grigoriy26', '123456', 'user', 1),
-  ('Беляев Борис Борисович', 'boris27', '123456', 'user', 1),
-  ('Тарасов Глеб Глебович', 'gleb28', '123456', 'user', 1),
-  ('Бобров Антон Антонович', 'anton29', '123456', 'user', 1),
-  ('Соловьев Виталий Витальевич', 'vitaliy30', '123456', 'user', 1),
-  ('Карпов Аркадий Аркадьевич', 'arkadiy31', '123456', 'user', 1),
-  ('Воробьев Дмитрий Дмитриевич', 'dmitriy32', '123456', 'user', 1),
-  ('Киселев Александр Александрович', 'alexandr33', '123456', 'user', 1),
-  ('Макаров Юрий Юрьевич', 'yuriy34', '123456', 'user', 1),
-  ('Андреев Роман Романович', 'roman35', '123456', 'user', 1),
-  ('Ковалев Алексей Алексеевич', 'alexey36', '123456', 'user', 1),
-  ('Иванов Кирилл Кириллович', 'kirill37', '123456', 'user', 1),
-  ('Соболев Валерий Валерьевич', 'valeriy38', '123456', 'user', 1),
-  ('Крылов Николай Николаевич', 'nikolay39', '123456', 'user', 1),
-  ('Григорьев Григорий Григорьевич', 'grigoriy40', '123456', 'user', 1),
-  ('Титов Михаил Михайлович', 'mikhail41', '123456', 'user', 1),
-  ('Лазарев Павел Павлович', 'pavel42', '123456', 'user', 1),
-  ('Медведев Артём Артемович', 'artem43', '123456', 'user', 1),
-  ('Чернов Илья Ильич', 'ilya44', '123456', 'user', 1),
-  ('Соловьев Олег Олегович', 'oleg45', '123456', 'user', 1),
-  ('Поляков Андрей Андреевич', 'andrey46', '123456', 'user', 1),
-  ('Зайцев Евгений Евгеньевич', 'evgeniy47', '123456', 'user', 1),
-  ('Васильев Дмитрий Дмитриевич', 'dmitriy48', '123456', 'user', 1),
-  ('Петров Аркадий Аркадьевич', 'arkadiy49', '123456', 'user', 1),
-  ('Федоров Константин Константинович', 'konstantin50', '123456', 'user', 1);
+- Seed users table with this command:
+```
+INSERT INTO users (name, login, password, role, access)
+VALUES
+  ('Maxim Maximovich Ivanov', 'maxim', '123456', 'admin', 1),
+  ('Alexey Alexeyevich Smirnov', 'alexey2', '123456', 'user', 1),
+  ('Dmitry Dmitrievich Kuznetsov', 'dmitriy3', '123456', 'user', 1),
+  ('Sergey Sergeyevich Popov', 'sergey4', '123456', 'user', 1),
+  ('Nikolay Nikolaevich Vasilyev', 'nikolay5', '123456', 'user', 1),
+  ('Alexander Alexandrovich Petrov', 'alexandr6', '123456', 'user', 1),
+  ('Mikhail Mikhailovich Sokolov', 'mikhail7', '123456', 'user', 1),
+  ('Andrey Andreyevich Mikhaylov', 'andrey8', '123456', 'user', 1),
+  ('Ivan Ivanovich Novikov', 'ivan9', '123456', 'user', 1),
+  ('Artem Artemovich Fyodorov', 'artem10', '123456', 'user', 1),
+  ('Vladimir Vladimirovich Morozov', 'vladimir11', '123456', 'user', 1),
+  ('Roman Romanovich Volkov', 'roman12', '123456', 'user', 1),
+  ('Evgeniy Evgenyevich Alekseyev', 'evgeniy13', '123456', 'user', 1),
+  ('Pavel Pavlovich Lebedev', 'pavel14', '123456', 'user', 1),
+  ('Konstantin Konstantinovich Semyonov', 'konstantin15', '123456', 'user', 1),
+  ('Viktor Viktorovich Yegorov', 'viktor16', '123456', 'user', 1),
+  ('Denis Denisovich Ilyin', 'denis17', '123456', 'user', 1),
+  ('Oleg Olegovich Zaytsev', 'oleg18', '123456', 'user', 1),
+  ('Vyacheslav Vyacheslavovich Pavlov', 'vyacheslav19', '123456', 'user', 1),
+  ('Vasiliy Vasilyevich Sergeyev', 'vasiliy20', '123456', 'user', 1),
+  ('Maxim Maximovich Stepanov', 'maxim21', '123456', 'user', 1),
+  ('Igor Igorevich Nikolaev', 'igor22', '123456', 'user', 1),
+  ('Artemiy Artemyevich Orlov', 'artemiy23', '123456', 'user', 1),
+  ('Stanislav Stanislavovich Afanasyev', 'stanislav24', '123456', 'user', 1),
+  ('Anatoliy Anatolyevich Frolov', 'anatoliy25', '123456', 'user', 1),
+  ('Grigoriy Grigorievich Schmidt', 'grigoriy26', '123456', 'user', 1),
+  ('Boris Borisovich Belyaev', 'boris27', '123456', 'user', 1),
+  ('Gleb Glebovich Tarasov', 'gleb28', '123456', 'user', 1),
+  ('Anton Antonovich Bobrov', 'anton29', '123456', 'user', 1),
+  ('Vitaliy Vitalievich Solovyov', 'vitaliy30', '123456', 'user', 1),
+  ('Arkadiy Arkadyevich Karpov', 'arkadiy31', '123456', 'user', 1),
+  ('Dmitry Dmitrievich Vorobyov', 'dmitriy32', '123456', 'user', 1),
+  ('Alexander Alexandrovich Kiselev', 'alexandr33', '123456', 'user', 1),
+  ('Yuriy Yuryevich Makarov', 'yuriy34', '123456', 'user', 1),
+  ('Roman Romanovich Andreyev', 'roman35', '123456', 'user', 1),
+  ('Alexey Alexeyevich Kovalyov', 'alexey36', '123456', 'user', 1),
+  ('Kirill Kirillovich Ivanov', 'kirill37', '123456', 'user', 1),
+  ('Valeriy Valeryevich Sobolev', 'valeriy38', '123456', 'user', 1),
+  ('Nikolay Nikolaevich Krylov', 'nikolay39', '123456', 'user', 1),
+  ('Grigoriy Grigorievich Grigoryev', 'grigoriy40', '123456', 'user', 1),
+  ('Mikhail Mikhailovich Titov', 'mikhail41', '123456', 'user', 1),
+  ('Pavel Pavlovich Lazarev', 'pavel42', '123456', 'user', 1),
+  ('Artem Artemovich Medvedev', 'artem43', '123456', 'user', 1),
+  ('Ilya Ilyich Chernov', 'ilya44', '123456', 'user', 1),
+  ('Oleg Olegovich Solovyov', 'oleg45', '123456', 'user', 1),
+  ('Andrey Andreyevich Polyakov', 'andrey46', '123456', 'user', 1),
+  ('Evgeniy Evgenyevich Zaytsev', 'evgeniy47', '123456', 'user', 1),
+  ('Dmitry Dmitrievich Vasilyev', 'dmitriy48', '123456', 'user', 1),
+  ('Arkadiy Arkadyevich Petrov', 'arkadiy49', '123456', 'user', 1),
+  ('Konstantin Konstantinovich Fyodorov', 'konstantin50', '123456', 'user', 1);
   ```
